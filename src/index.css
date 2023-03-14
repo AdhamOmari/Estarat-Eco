@@ -3,5 +3,13 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: gray;
+  background-color: #0c0c0c;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
 }

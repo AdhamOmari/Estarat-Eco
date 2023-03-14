@@ -25,13 +25,10 @@ export default function LoginPage () {
         onChange={e => setEmail(e.target.value)}
         type='email'
         placeholder='Enter your email'
+        className={styles.form__field}
       />
 
-      <button
-        disabled={loading}
-        onClick={handleLogin}
-        className={styles.loginBtn}
-      >
+      <button disabled={loading} onClick={handleLogin} className={styles.btn}>
         {loading ? 'Loading...' : 'login'}
       </button>
     </div>

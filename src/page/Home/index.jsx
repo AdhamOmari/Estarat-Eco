@@ -1,7 +1,9 @@
 import React from 'react'
-
-export default function Home() {
+import style from './style.module.css'
+export default function Home () {
   return (
-    <div>Home</div>
+    <div className={style.home_wrap}>
+      <div>Home</div>
+    </div>
   )
 }
