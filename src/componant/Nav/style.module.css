@@ -1,0 +1,16 @@
+.link_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 60px;
+    position: relative;
+    left: 80%;
+}
+
+.nav_item {
+    position: absolute;
+    left: 90%;
+    top: 20%;
+
+}
