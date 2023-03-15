@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { login } from '../../redux/auth/action'
 import { useDispatch, useSelector } from 'react-redux'
 
+import { ScaleLoader } from 'react-spinners'
 export default function LoginPage () {
   const { isAuth, loading } = useSelector(state => state.authReducer)
   console.log(isAuth)

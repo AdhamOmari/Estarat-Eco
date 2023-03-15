@@ -8,7 +8,7 @@ import { logOut } from '../../redux/auth/action'
 export default function index () {
   const nav = useNavigate()
 
-  const { isAuth, user } = useSelector(state => state.authReducer)
+  const { isAuth, user, loading } = useSelector(state => state.authReducer)
   const dispatch = useDispatch()
   const [flag, setFlag] = useState(false)
   const handelLogout = () => {
@@ -19,6 +19,7 @@ export default function index () {
       }
     })
   }
+
   return (
     <nav className={style.nav_Flex}>
       <h1>Estarta</h1>
