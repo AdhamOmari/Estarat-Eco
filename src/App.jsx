@@ -40,11 +40,13 @@ export default function App () {
             path='/Cart'
             element={<ProtectedRoutes element={<Cart />} />}
           />
-          <Route
+          {/* <Route
             path='/Products'
             element={<ProtectedRoutes element={<Products />} />}
-          />
+          /> */}
+
           <Route path='/Login' element={<Login />} />
+          <Route path='/Products' element={<Products />} />
           <Route path='*' element={<Notfound />} />
         </Routes>
       </Suspense>
