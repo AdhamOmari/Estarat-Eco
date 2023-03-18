@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { BiUserCircle } from 'react-icons/bi'
 import { useDispatch, useSelector } from 'react-redux'
 import { logOut } from '../../redux/auth/action'
+// import { RingLoader } from 'react-spinners'
 
 export default function index () {
   const nav = useNavigate()
@@ -19,7 +20,7 @@ export default function index () {
       }
     })
   }
-
+  // if (loading) return <RingLoader color='#36d7b7' size={20} />
   return (
     <nav className={style.nav_Flex}>
       <h1>Estarta</h1>
