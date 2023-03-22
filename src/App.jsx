@@ -3,10 +3,9 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import NavBar from './componant/Nav/index'
 import { tokenChecker } from './redux/auth/action'
 import { ScaleLoader } from 'react-spinners'
-
 const Home = lazy(() => import('./page/Home'))
-const Cart = lazy(() => import('./page/Cart'))
-const Products = lazy(() => import('./page/Products'))
+const Cart = lazy(() => import('./page/Cart/index'))
+const Products = lazy(() => import('./page/Products/index'))
 const Login = lazy(() => import('./page/Login'))
 const Notfound = lazy(() => import('./page/Notfound'))
 import { useDispatch, useSelector } from 'react-redux'
@@ -40,10 +39,10 @@ export default function App () {
             path='/Cart'
             element={<ProtectedRoutes element={<Cart />} />}
           />
-          {/* <Route
+          <Route
             path='/Products'
             element={<ProtectedRoutes element={<Products />} />}
-          /> */}
+          />
 
           <Route path='/Login' element={<Login />} />
           <Route path='/Products' element={<Products />} />
