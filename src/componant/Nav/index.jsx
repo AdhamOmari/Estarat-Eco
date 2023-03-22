@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import style from './style.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { BiUserCircle } from 'react-icons/bi'
+import { BsCart4 } from 'react-icons/bs'
 import { useDispatch, useSelector } from 'react-redux'
 import { logOut } from '../../redux/auth/action'
 // import { RingLoader } from 'react-spinners'
 
 export default function index () {
   const nav = useNavigate()
+  const { cartData } = useSelector(state => state.addToCardReducer)
 
+  console.log(cartData.length, 'data.length')
   const { isAuth, user, loading } = useSelector(state => state.authReducer)
   const dispatch = useDispatch()
   const [flag, setFlag] = useState(false)
@@ -27,7 +30,14 @@ export default function index () {
 
       <div className={style.nav_item}>
         {isAuth && (
-          <div>
+          <div className={style.nav_wrap}>
+            <NavLink to='/Products' className={style.Products}>
+              Products
+            </NavLink>
+            <Link to='/Cart' className={style.cart_color}>
+              <BsCart4 size={25} />
+              <div className={style.cart_number}>{cartData?.length}</div>
+            </Link>
             <BiUserCircle
               size={30}
               color={'#fff'}

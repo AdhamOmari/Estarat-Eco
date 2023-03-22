@@ -88,3 +88,28 @@ h1 {
     left: 49px;
 
 }
+
+.nav_wrap {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.Products {
+    color: #fff;
+
+}
+
+.cart_number {
+    position: absolute;
+    top: -17px;
+    right: 29px;
+    color: #f5f5f5;
+    font-size: 20px;
+
+}
+
+.cart_color {
+    color: #f5f5f5;
+}

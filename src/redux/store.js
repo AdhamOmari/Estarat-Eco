@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import AllReducer from './AllReducer'
 
 
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(AllReducer, {}, composeEnhancer(applyMiddleware(thunk)))
+const store = createStore(AllReducer, {}, composeEnhancers(applyMiddleware(thunk)))
 export default store;
